@@ -28,15 +28,16 @@ public class activity_dashboard extends AppCompatActivity {
         recyclerViewCombined.setLayoutManager(gridLayoutManager);
 
         Object[][] dataCombined = {
-                {R.drawable.pesawat, "Title 1", 100},
-                {R.drawable.pesawat, "Title 2", 150},
-                {R.drawable.pesawat1, "Title 3", 200},
-                {R.drawable.pesawat1, "Title 4", 250},
-                {R.drawable.pesawat1, "Title 4", 250},
+                {R.drawable.pesawat1, "Cessna", 100},
+                {R.drawable.pesawat1, "Boeing", 150},
+                {R.drawable.pesawat1, "Airbus", 200},
+                {R.drawable.pesawat1, "Bombardier", 250},
+                // Add more data as needed
         };
 
-        MyAdapter adapterCombined = new MyAdapter(dataCombined);
+        MyAdapter adapterCombined = new MyAdapter(this, dataCombined);
         recyclerViewCombined.setAdapter(adapterCombined);
     }
 }
+
 

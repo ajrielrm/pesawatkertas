@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".checkout">
+
+    <ImageView
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/imagepesawatcheckout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+    <TextView
+        android:id="@+id/titlecheckout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Private Jet"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@id/imagepesawatcheckout"
+        android:fontFamily="@font/popbold"
+        />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rp. 50,000,000"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/titlecheckout"
+        android:fontFamily="@font/poplight"
+        />
+    <TextView
+        android:id="@+id/pax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/Pax"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toRightOf="@id/price"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/titlecheckout"
+        android:fontFamily="@font/popbold"
+        />
+    <TextView
+        android:id="@+id/persontitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Person"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/price"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/price"
+        android:fontFamily="@font/popbold"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="350dp"
+        app:layout_constraintLeft_toLeftOf="@id/persontitle"
+        android:layout_height="wrap_content"
+        app:hintEnabled="true"
+        app:hintTextAppearance="@color/cardview_dark_background"
+        app:layout_constraintTop_toBottomOf="@+id/persontitle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Person"
+            android:inputType="number"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login"
+        android:text="Submit"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:onClick="onContinueButtonClick"
+        android:background="@drawable/button"
+        android:backgroundTint="#2DACB2"
+        app:layout_constraintLeft_toLeftOf="@id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayout"
+        android:layout_width="350dp"
+        android:fontFamily="@font/popbold"
+        android:layout_height="48dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
