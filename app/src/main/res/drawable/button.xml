@@ -1,0 +1,18 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <corners android:radius="10dp" />
+            <solid android:color="#FF4081" />
+        </shape>
+    </item>
+
+    <item android:id="@android:id/content" android:left="10dp" android:right="10dp" android:top="10dp" android:bottom="10dp">
+        <!-- Adjust the padding values as needed -->
+        <shape android:shape="rectangle">
+            <corners android:radius="10dp" />
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+
+</layer-list>
